@@ -1,0 +1,197 @@
+\doxysection{Файл src/\+Game\+Engine.h}
+\hypertarget{_game_engine_8h}{}\label{_game_engine_8h}\index{src/GameEngine.h@{src/GameEngine.h}}
+
+
+Заголовочный файл логики консольной игры "{}Тетрис"{}.  
+
+
+{\ttfamily \#include $<$vector$>$}\newline
+\doxysubsubsection*{Классы}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_piece}{Piece}}
+\begin{DoxyCompactList}\small\item\em Структура, описывающая фигуру Тетриса. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Функции}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_game_engine_8h_a25af909d8e39eca503c433f650ce7846}{rotate}} (\mbox{\hyperlink{struct_piece}{Piece}} \&p)
+\begin{DoxyCompactList}\small\item\em Поворачивает фигуру по часовой стрелке, если это возможно. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{_game_engine_8h_ad04c2335648d191e64110b495d33481b}{is\+\_\+valid\+\_\+position}} (const \mbox{\hyperlink{struct_piece}{Piece}} \&p)
+\begin{DoxyCompactList}\small\item\em Проверяет возможность размещения фигуры на текущей позиции. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_game_engine_8h_ac59bfee1e8e6399c6175667459004aeb}{apply\+\_\+piece\+\_\+to\+\_\+field}} (const \mbox{\hyperlink{struct_piece}{Piece}} \&p, int value)
+\begin{DoxyCompactList}\small\item\em Устанавливает или удаляет фигуру с игрового поля. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_piece}{Piece}} \mbox{\hyperlink{_game_engine_8h_ae9c6e89d409975ae54d3fd1b80886de0}{generate\+\_\+piece}} ()
+\begin{DoxyCompactList}\small\item\em Генерирует новую случайную фигуру. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{_game_engine_8h_a2ac3dc3442afdcff8aa8f5844f1c797e}{game\+\_\+over}} ()
+\begin{DoxyCompactList}\small\item\em Проверяет, завершена ли игра. \end{DoxyCompactList}\item 
+\Hypertarget{_game_engine_8h_a8180985bda05d2858c1cd892c9619a42}\label{_game_engine_8h_a8180985bda05d2858c1cd892c9619a42} 
+void {\bfseries clear\+\_\+lines} ()
+\begin{DoxyCompactList}\small\item\em Проверяет и очищает полностью заполненные линии. Также увеличивает счёт и ускоряет игру. \end{DoxyCompactList}\item 
+\Hypertarget{_game_engine_8h_a65d696c970e3074a3b07780b1cedc407}\label{_game_engine_8h_a65d696c970e3074a3b07780b1cedc407} 
+void {\bfseries update\+\_\+level} ()
+\begin{DoxyCompactList}\small\item\em Обновляет уровень сложности и скорость падения фигуры. Используется для адаптации игры к набранному счёту. \end{DoxyCompactList}\item 
+\Hypertarget{_game_engine_8h_aa5cbfb93d2e672bb20c4cd3bad28c5f6}\label{_game_engine_8h_aa5cbfb93d2e672bb20c4cd3bad28c5f6} 
+void {\bfseries update\+\_\+high\+\_\+score} ()
+\begin{DoxyCompactList}\small\item\em Обновляет рекорд, если текущий счёт выше. \end{DoxyCompactList}\item 
+\Hypertarget{_game_engine_8h_af67480724089637b55a8148566870f16}\label{_game_engine_8h_af67480724089637b55a8148566870f16} 
+void {\bfseries show\+\_\+menu} ()
+\begin{DoxyCompactList}\small\item\em Отображает начальное меню выбора уровня сложности. \end{DoxyCompactList}\item 
+\Hypertarget{_game_engine_8h_a3846d321795837b2191221156b68b278}\label{_game_engine_8h_a3846d321795837b2191221156b68b278} 
+void {\bfseries load\+\_\+high\+\_\+score} ()
+\begin{DoxyCompactList}\small\item\em Загружает рекорд из файла (если существует). \end{DoxyCompactList}\item 
+\Hypertarget{_game_engine_8h_a56c5cf8a568cff737ff95520cbe6b405}\label{_game_engine_8h_a56c5cf8a568cff737ff95520cbe6b405} 
+void {\bfseries draw} ()
+\begin{DoxyCompactList}\small\item\em Выполняет отрисовку поля, текущей фигуры и информационной панели. \end{DoxyCompactList}\item 
+\Hypertarget{_game_engine_8h_ac3bdbc826d19fb41ffb25470527c3801}\label{_game_engine_8h_ac3bdbc826d19fb41ffb25470527c3801} 
+void {\bfseries input} ()
+\begin{DoxyCompactList}\small\item\em Обрабатывает нажатие клавиш\+: движение, поворот, пауза. \end{DoxyCompactList}\item 
+\Hypertarget{_game_engine_8h_aa2e421f9f161db4a8464ffef78070d69}\label{_game_engine_8h_aa2e421f9f161db4a8464ffef78070d69} 
+void {\bfseries update\+\_\+game} ()
+\begin{DoxyCompactList}\small\item\em Обновляет состояние игры\+: падение фигуры, генерация новой, проверка завершения. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Переменные}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ std\+::vector$<$ int $>$ $>$ \mbox{\hyperlink{_game_engine_8h_a896c91b01a80d80e74999f2699d48a4c}{field}}
+\item 
+\mbox{\hyperlink{struct_piece}{Piece}} \mbox{\hyperlink{_game_engine_8h_a36381e5f046b411fc40d17bf0b39dd12}{current}}
+\item 
+bool \mbox{\hyperlink{_game_engine_8h_a1656129c4a4fd8809254194f08f0ac70}{paused}}
+\item 
+int \mbox{\hyperlink{_game_engine_8h_acf4d33ee4cff36f69b924471174dcb11}{level}}
+\item 
+int \mbox{\hyperlink{_game_engine_8h_a218b4f7c6cc2681a99c23a3b089d68b1}{speed}}
+\item 
+int \mbox{\hyperlink{_game_engine_8h_aef160b7437d94056f1dc59646cd5b87d}{score}}
+\item 
+int \mbox{\hyperlink{_game_engine_8h_ab9e8b93fcb70fbed1fc4a2afd618db9b}{high\+Score}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Заголовочный файл логики консольной игры "{}Тетрис"{}. 
+
+Содержит определения структур и объявление глобальных переменных, а также интерфейс функций, отвечающих за отрисовку поля, обработку фигур, пользовательского ввода, генерацию и проверку коллизий. 
+
+\doxysubsection{Функции}
+\Hypertarget{_game_engine_8h_ac59bfee1e8e6399c6175667459004aeb}\index{GameEngine.h@{GameEngine.h}!apply\_piece\_to\_field@{apply\_piece\_to\_field}}
+\index{apply\_piece\_to\_field@{apply\_piece\_to\_field}!GameEngine.h@{GameEngine.h}}
+\doxysubsubsection{\texorpdfstring{apply\_piece\_to\_field()}{apply\_piece\_to\_field()}}
+{\footnotesize\ttfamily \label{_game_engine_8h_ac59bfee1e8e6399c6175667459004aeb} 
+void apply\+\_\+piece\+\_\+to\+\_\+field (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_piece}{Piece}} \&}]{p}{, }\item[{int}]{value}{}\end{DoxyParamCaption})}
+
+
+
+Устанавливает или удаляет фигуру с игрового поля. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em p} & Фигура. \\
+\hline
+{\em value} & 1 — разместить фигуру, 0 — удалить. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_game_engine_8h_a2ac3dc3442afdcff8aa8f5844f1c797e}\index{GameEngine.h@{GameEngine.h}!game\_over@{game\_over}}
+\index{game\_over@{game\_over}!GameEngine.h@{GameEngine.h}}
+\doxysubsubsection{\texorpdfstring{game\_over()}{game\_over()}}
+{\footnotesize\ttfamily \label{_game_engine_8h_a2ac3dc3442afdcff8aa8f5844f1c797e} 
+bool game\+\_\+over (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Проверяет, завершена ли игра. 
+
+\begin{DoxyReturn}{Возвращает}
+true — если фигура не может быть размещена, иначе false. 
+\end{DoxyReturn}
+\Hypertarget{_game_engine_8h_ae9c6e89d409975ae54d3fd1b80886de0}\index{GameEngine.h@{GameEngine.h}!generate\_piece@{generate\_piece}}
+\index{generate\_piece@{generate\_piece}!GameEngine.h@{GameEngine.h}}
+\doxysubsubsection{\texorpdfstring{generate\_piece()}{generate\_piece()}}
+{\footnotesize\ttfamily \label{_game_engine_8h_ae9c6e89d409975ae54d3fd1b80886de0} 
+\mbox{\hyperlink{struct_piece}{Piece}} generate\+\_\+piece (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Генерирует новую случайную фигуру. 
+
+\begin{DoxyReturn}{Возвращает}
+Новая фигура типа \doxylink{struct_piece}{Piece}. 
+\end{DoxyReturn}
+\Hypertarget{_game_engine_8h_ad04c2335648d191e64110b495d33481b}\index{GameEngine.h@{GameEngine.h}!is\_valid\_position@{is\_valid\_position}}
+\index{is\_valid\_position@{is\_valid\_position}!GameEngine.h@{GameEngine.h}}
+\doxysubsubsection{\texorpdfstring{is\_valid\_position()}{is\_valid\_position()}}
+{\footnotesize\ttfamily \label{_game_engine_8h_ad04c2335648d191e64110b495d33481b} 
+bool is\+\_\+valid\+\_\+position (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_piece}{Piece}} \&}]{p}{}\end{DoxyParamCaption})}
+
+
+
+Проверяет возможность размещения фигуры на текущей позиции. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em p} & Проверяемая фигура. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+true — если можно разместить, false — если произойдёт коллизия. 
+\end{DoxyReturn}
+\Hypertarget{_game_engine_8h_a25af909d8e39eca503c433f650ce7846}\index{GameEngine.h@{GameEngine.h}!rotate@{rotate}}
+\index{rotate@{rotate}!GameEngine.h@{GameEngine.h}}
+\doxysubsubsection{\texorpdfstring{rotate()}{rotate()}}
+{\footnotesize\ttfamily \label{_game_engine_8h_a25af909d8e39eca503c433f650ce7846} 
+void rotate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_piece}{Piece}} \&}]{p}{}\end{DoxyParamCaption})}
+
+
+
+Поворачивает фигуру по часовой стрелке, если это возможно. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em p} & Ссылка на фигуру для поворота. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Переменные}
+\Hypertarget{_game_engine_8h_a36381e5f046b411fc40d17bf0b39dd12}\index{GameEngine.h@{GameEngine.h}!current@{current}}
+\index{current@{current}!GameEngine.h@{GameEngine.h}}
+\doxysubsubsection{\texorpdfstring{current}{current}}
+{\footnotesize\ttfamily \label{_game_engine_8h_a36381e5f046b411fc40d17bf0b39dd12} 
+\mbox{\hyperlink{struct_piece}{Piece}} current\hspace{0.3cm}{\ttfamily [extern]}}
+
+Текущая фигура, управляемая игроком. \Hypertarget{_game_engine_8h_a896c91b01a80d80e74999f2699d48a4c}\index{GameEngine.h@{GameEngine.h}!field@{field}}
+\index{field@{field}!GameEngine.h@{GameEngine.h}}
+\doxysubsubsection{\texorpdfstring{field}{field}}
+{\footnotesize\ttfamily \label{_game_engine_8h_a896c91b01a80d80e74999f2699d48a4c} 
+std\+::vector$<$std\+::vector$<$int$>$ $>$ field\hspace{0.3cm}{\ttfamily [extern]}}
+
+Игровое поле 20x10, где 0 — пустая клетка, 1 — занятая. \Hypertarget{_game_engine_8h_ab9e8b93fcb70fbed1fc4a2afd618db9b}\index{GameEngine.h@{GameEngine.h}!highScore@{highScore}}
+\index{highScore@{highScore}!GameEngine.h@{GameEngine.h}}
+\doxysubsubsection{\texorpdfstring{highScore}{highScore}}
+{\footnotesize\ttfamily \label{_game_engine_8h_ab9e8b93fcb70fbed1fc4a2afd618db9b} 
+int high\+Score\hspace{0.3cm}{\ttfamily [extern]}}
+
+Лучший результат, сохранённый между сессиями. \Hypertarget{_game_engine_8h_acf4d33ee4cff36f69b924471174dcb11}\index{GameEngine.h@{GameEngine.h}!level@{level}}
+\index{level@{level}!GameEngine.h@{GameEngine.h}}
+\doxysubsubsection{\texorpdfstring{level}{level}}
+{\footnotesize\ttfamily \label{_game_engine_8h_acf4d33ee4cff36f69b924471174dcb11} 
+int level\hspace{0.3cm}{\ttfamily [extern]}}
+
+Текущий уровень сложности игры (1 — лёгкий, 2 — средний, 3 — сложный). \Hypertarget{_game_engine_8h_a1656129c4a4fd8809254194f08f0ac70}\index{GameEngine.h@{GameEngine.h}!paused@{paused}}
+\index{paused@{paused}!GameEngine.h@{GameEngine.h}}
+\doxysubsubsection{\texorpdfstring{paused}{paused}}
+{\footnotesize\ttfamily \label{_game_engine_8h_a1656129c4a4fd8809254194f08f0ac70} 
+bool paused\hspace{0.3cm}{\ttfamily [extern]}}
+
+Флаг паузы игры (true — игра на паузе). \Hypertarget{_game_engine_8h_aef160b7437d94056f1dc59646cd5b87d}\index{GameEngine.h@{GameEngine.h}!score@{score}}
+\index{score@{score}!GameEngine.h@{GameEngine.h}}
+\doxysubsubsection{\texorpdfstring{score}{score}}
+{\footnotesize\ttfamily \label{_game_engine_8h_aef160b7437d94056f1dc59646cd5b87d} 
+int score\hspace{0.3cm}{\ttfamily [extern]}}
+
+Текущий счёт игрока. \Hypertarget{_game_engine_8h_a218b4f7c6cc2681a99c23a3b089d68b1}\index{GameEngine.h@{GameEngine.h}!speed@{speed}}
+\index{speed@{speed}!GameEngine.h@{GameEngine.h}}
+\doxysubsubsection{\texorpdfstring{speed}{speed}}
+{\footnotesize\ttfamily \label{_game_engine_8h_a218b4f7c6cc2681a99c23a3b089d68b1} 
+int speed\hspace{0.3cm}{\ttfamily [extern]}}
+
+Скорость падения фигур (в миллисекундах), зависит от уровня. 

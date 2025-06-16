@@ -1,0 +1,56 @@
+\doxysection{Game\+Engine.\+h}
+\hypertarget{_game_engine_8h_source}{}\label{_game_engine_8h_source}\index{src/GameEngine.h@{src/GameEngine.h}}
+\mbox{\hyperlink{_game_engine_8h}{См. документацию.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_piece}{Piece}}\ \{}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_piece_a895b6803ce74fe8574d6168d66ac6bb5}{x}};\ }
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_piece_a97d61c9e42873e2274620c91178e879b}{y}};\ }
+\DoxyCodeLine{00018\ \ \ \ \ std::vector<std::vector<int>>\ \mbox{\hyperlink{struct_piece_ac230be187a7a2b9e2609125f71bd7b5e}{shape}};\ }
+\DoxyCodeLine{00019\ \};}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00023\ \textcolor{keyword}{extern}\ std::vector<std::vector<int>>\ \mbox{\hyperlink{_game_engine_8h_a896c91b01a80d80e74999f2699d48a4c}{field}};}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00027\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{struct_piece}{Piece}}\ current;}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00031\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{bool}\ paused;}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00035\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{int}\ level;}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00039\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{int}\ speed;}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00043\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{int}\ score;}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00047\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{int}\ highScore;}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00053\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_game_engine_8h_a25af909d8e39eca503c433f650ce7846}{rotate}}(\mbox{\hyperlink{struct_piece}{Piece}}\ \&p);}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00060\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{_game_engine_8h_ad04c2335648d191e64110b495d33481b}{is\_valid\_position}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_piece}{Piece}}\ \&p);}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00067\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_game_engine_8h_ac59bfee1e8e6399c6175667459004aeb}{apply\_piece\_to\_field}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_piece}{Piece}}\ \&p,\ \textcolor{keywordtype}{int}\ value);}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00073\ \mbox{\hyperlink{struct_piece}{Piece}}\ \mbox{\hyperlink{_game_engine_8h_ae9c6e89d409975ae54d3fd1b80886de0}{generate\_piece}}();}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00079\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{_game_engine_8h_a2ac3dc3442afdcff8aa8f5844f1c797e}{game\_over}}();}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00085\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_game_engine_8h_a8180985bda05d2858c1cd892c9619a42}{clear\_lines}}();}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00091\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_game_engine_8h_a65d696c970e3074a3b07780b1cedc407}{update\_level}}();}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00096\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_game_engine_8h_aa5cbfb93d2e672bb20c4cd3bad28c5f6}{update\_high\_score}}();}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00101\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_game_engine_8h_af67480724089637b55a8148566870f16}{show\_menu}}();}
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00106\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_game_engine_8h_a3846d321795837b2191221156b68b278}{load\_high\_score}}();}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00111\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_game_engine_8h_a56c5cf8a568cff737ff95520cbe6b405}{draw}}();}
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00116\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_game_engine_8h_ac3bdbc826d19fb41ffb25470527c3801}{input}}();}
+\DoxyCodeLine{00117\ }
+\DoxyCodeLine{00121\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_game_engine_8h_aa2e421f9f161db4a8464ffef78070d69}{update\_game}}();}
+
+\end{DoxyCode}

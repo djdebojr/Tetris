@@ -1,0 +1,188 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Tetris: Исходный файл src/GameEngine.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Tetris
+   </div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="Поиск" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('_game_engine_8h_source.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">GameEngine.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_game_engine_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span></div>
+<div class="foldopen" id="foldopen00015" data-start="{" data-end="};">
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="struct_piece.html">   15</a></span><span class="keyword">struct </span><a class="code hl_struct" href="struct_piece.html">Piece</a> {</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="struct_piece.html#a895b6803ce74fe8574d6168d66ac6bb5">   16</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="struct_piece.html#a895b6803ce74fe8574d6168d66ac6bb5">x</a>; </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="struct_piece.html#a97d61c9e42873e2274620c91178e879b">   17</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="struct_piece.html#a97d61c9e42873e2274620c91178e879b">y</a>; </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="struct_piece.html#ac230be187a7a2b9e2609125f71bd7b5e">   18</a></span>    std::vector&lt;std::vector&lt;int&gt;&gt; <a class="code hl_variable" href="struct_piece.html#ac230be187a7a2b9e2609125f71bd7b5e">shape</a>; </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>};</div>
+</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="keyword">extern</span> std::vector&lt;std::vector&lt;int&gt;&gt; <a class="code hl_variable" href="_game_engine_8h.html#a896c91b01a80d80e74999f2699d48a4c">field</a>;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="keyword">extern</span> <a class="code hl_struct" href="struct_piece.html">Piece</a> current;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="keyword">extern</span> <span class="keywordtype">bool</span> paused;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="keyword">extern</span> <span class="keywordtype">int</span> level;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="keyword">extern</span> <span class="keywordtype">int</span> speed;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="keyword">extern</span> <span class="keywordtype">int</span> score;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="keyword">extern</span> <span class="keywordtype">int</span> highScore;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="keywordtype">void</span> <a class="code hl_function" href="_game_engine_8h.html#a25af909d8e39eca503c433f650ce7846">rotate</a>(<a class="code hl_struct" href="struct_piece.html">Piece</a> &amp;p);</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="_game_engine_8h.html#ad04c2335648d191e64110b495d33481b">   60</a></span><span class="keywordtype">bool</span> <a class="code hl_function" href="_game_engine_8h.html#ad04c2335648d191e64110b495d33481b">is_valid_position</a>(<span class="keyword">const</span> <a class="code hl_struct" href="struct_piece.html">Piece</a> &amp;p);</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="keywordtype">void</span> <a class="code hl_function" href="_game_engine_8h.html#ac59bfee1e8e6399c6175667459004aeb">apply_piece_to_field</a>(<span class="keyword">const</span> <a class="code hl_struct" href="struct_piece.html">Piece</a> &amp;p, <span class="keywordtype">int</span> value);</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span><a class="code hl_struct" href="struct_piece.html">Piece</a> <a class="code hl_function" href="_game_engine_8h.html#ae9c6e89d409975ae54d3fd1b80886de0">generate_piece</a>();</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span></div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span><span class="keywordtype">bool</span> <a class="code hl_function" href="_game_engine_8h.html#a2ac3dc3442afdcff8aa8f5844f1c797e">game_over</a>();</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span></div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span><span class="keywordtype">void</span> <a class="code hl_function" href="_game_engine_8h.html#a8180985bda05d2858c1cd892c9619a42">clear_lines</a>();</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span></div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno"><a class="line" href="_game_engine_8h.html#a65d696c970e3074a3b07780b1cedc407">   91</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="_game_engine_8h.html#a65d696c970e3074a3b07780b1cedc407">update_level</a>();</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span></div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno"><a class="line" href="_game_engine_8h.html#aa5cbfb93d2e672bb20c4cd3bad28c5f6">   96</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="_game_engine_8h.html#aa5cbfb93d2e672bb20c4cd3bad28c5f6">update_high_score</a>();</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span></div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span><span class="keywordtype">void</span> <a class="code hl_function" href="_game_engine_8h.html#af67480724089637b55a8148566870f16">show_menu</a>();</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span></div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span><span class="keywordtype">void</span> <a class="code hl_function" href="_game_engine_8h.html#a3846d321795837b2191221156b68b278">load_high_score</a>();</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span></div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span><span class="keywordtype">void</span> <a class="code hl_function" href="_game_engine_8h.html#a56c5cf8a568cff737ff95520cbe6b405">draw</a>();</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span></div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span><span class="keywordtype">void</span> <a class="code hl_function" href="_game_engine_8h.html#ac3bdbc826d19fb41ffb25470527c3801">input</a>();</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span></div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span><span class="keywordtype">void</span> <a class="code hl_function" href="_game_engine_8h.html#aa2e421f9f161db4a8464ffef78070d69">update_game</a>();</div>
+<div class="ttc" id="a_game_engine_8h_html_a25af909d8e39eca503c433f650ce7846"><div class="ttname"><a href="_game_engine_8h.html#a25af909d8e39eca503c433f650ce7846">rotate</a></div><div class="ttdeci">void rotate(Piece &amp;p)</div><div class="ttdoc">Поворачивает фигуру по часовой стрелке, если это возможно.</div><div class="ttdef"><b>Определения</b> GameEngine.cpp:147</div></div>
+<div class="ttc" id="a_game_engine_8h_html_a2ac3dc3442afdcff8aa8f5844f1c797e"><div class="ttname"><a href="_game_engine_8h.html#a2ac3dc3442afdcff8aa8f5844f1c797e">game_over</a></div><div class="ttdeci">bool game_over()</div><div class="ttdoc">Проверяет, завершена ли игра.</div><div class="ttdef"><b>Определения</b> GameEngine.cpp:184</div></div>
+<div class="ttc" id="a_game_engine_8h_html_a3846d321795837b2191221156b68b278"><div class="ttname"><a href="_game_engine_8h.html#a3846d321795837b2191221156b68b278">load_high_score</a></div><div class="ttdeci">void load_high_score()</div><div class="ttdoc">Загружает рекорд из файла (если существует).</div><div class="ttdef"><b>Определения</b> GameEngine.cpp:219</div></div>
+<div class="ttc" id="a_game_engine_8h_html_a56c5cf8a568cff737ff95520cbe6b405"><div class="ttname"><a href="_game_engine_8h.html#a56c5cf8a568cff737ff95520cbe6b405">draw</a></div><div class="ttdeci">void draw()</div><div class="ttdoc">Выполняет отрисовку поля, текущей фигуры и информационной панели.</div><div class="ttdef"><b>Определения</b> GameEngine.cpp:63</div></div>
+<div class="ttc" id="a_game_engine_8h_html_a65d696c970e3074a3b07780b1cedc407"><div class="ttname"><a href="_game_engine_8h.html#a65d696c970e3074a3b07780b1cedc407">update_level</a></div><div class="ttdeci">void update_level()</div><div class="ttdoc">Обновляет уровень сложности и скорость падения фигуры. Используется для адаптации игры к набранному с...</div></div>
+<div class="ttc" id="a_game_engine_8h_html_a8180985bda05d2858c1cd892c9619a42"><div class="ttname"><a href="_game_engine_8h.html#a8180985bda05d2858c1cd892c9619a42">clear_lines</a></div><div class="ttdeci">void clear_lines()</div><div class="ttdoc">Проверяет и очищает полностью заполненные линии. Также увеличивает счёт и ускоряет игру.</div><div class="ttdef"><b>Определения</b> GameEngine.cpp:123</div></div>
+<div class="ttc" id="a_game_engine_8h_html_a896c91b01a80d80e74999f2699d48a4c"><div class="ttname"><a href="_game_engine_8h.html#a896c91b01a80d80e74999f2699d48a4c">field</a></div><div class="ttdeci">std::vector&lt; std::vector&lt; int &gt; &gt; field</div></div>
+<div class="ttc" id="a_game_engine_8h_html_aa2e421f9f161db4a8464ffef78070d69"><div class="ttname"><a href="_game_engine_8h.html#aa2e421f9f161db4a8464ffef78070d69">update_game</a></div><div class="ttdeci">void update_game()</div><div class="ttdoc">Обновляет состояние игры: падение фигуры, генерация новой, проверка завершения.</div><div class="ttdef"><b>Определения</b> GameEngine.cpp:189</div></div>
+<div class="ttc" id="a_game_engine_8h_html_aa5cbfb93d2e672bb20c4cd3bad28c5f6"><div class="ttname"><a href="_game_engine_8h.html#aa5cbfb93d2e672bb20c4cd3bad28c5f6">update_high_score</a></div><div class="ttdeci">void update_high_score()</div><div class="ttdoc">Обновляет рекорд, если текущий счёт выше.</div></div>
+<div class="ttc" id="a_game_engine_8h_html_ac3bdbc826d19fb41ffb25470527c3801"><div class="ttname"><a href="_game_engine_8h.html#ac3bdbc826d19fb41ffb25470527c3801">input</a></div><div class="ttdeci">void input()</div><div class="ttdoc">Обрабатывает нажатие клавиш: движение, поворот, пауза.</div><div class="ttdef"><b>Определения</b> GameEngine.cpp:171</div></div>
+<div class="ttc" id="a_game_engine_8h_html_ac59bfee1e8e6399c6175667459004aeb"><div class="ttname"><a href="_game_engine_8h.html#ac59bfee1e8e6399c6175667459004aeb">apply_piece_to_field</a></div><div class="ttdeci">void apply_piece_to_field(const Piece &amp;p, int value)</div><div class="ttdoc">Устанавливает или удаляет фигуру с игрового поля.</div><div class="ttdef"><b>Определения</b> GameEngine.cpp:107</div></div>
+<div class="ttc" id="a_game_engine_8h_html_ad04c2335648d191e64110b495d33481b"><div class="ttname"><a href="_game_engine_8h.html#ad04c2335648d191e64110b495d33481b">is_valid_position</a></div><div class="ttdeci">bool is_valid_position(const Piece &amp;p)</div><div class="ttdoc">Проверяет возможность размещения фигуры на текущей позиции.</div></div>
+<div class="ttc" id="a_game_engine_8h_html_ae9c6e89d409975ae54d3fd1b80886de0"><div class="ttname"><a href="_game_engine_8h.html#ae9c6e89d409975ae54d3fd1b80886de0">generate_piece</a></div><div class="ttdeci">Piece generate_piece()</div><div class="ttdoc">Генерирует новую случайную фигуру.</div><div class="ttdef"><b>Определения</b> GameEngine.cpp:138</div></div>
+<div class="ttc" id="a_game_engine_8h_html_af67480724089637b55a8148566870f16"><div class="ttname"><a href="_game_engine_8h.html#af67480724089637b55a8148566870f16">show_menu</a></div><div class="ttdeci">void show_menu()</div><div class="ttdoc">Отображает начальное меню выбора уровня сложности.</div><div class="ttdef"><b>Определения</b> GameEngine.cpp:210</div></div>
+<div class="ttc" id="astruct_piece_html"><div class="ttname"><a href="struct_piece.html">Piece</a></div><div class="ttdoc">Структура, описывающая фигуру Тетриса.</div><div class="ttdef"><b>Определения</b> GameEngine.h:15</div></div>
+<div class="ttc" id="astruct_piece_html_a895b6803ce74fe8574d6168d66ac6bb5"><div class="ttname"><a href="struct_piece.html#a895b6803ce74fe8574d6168d66ac6bb5">Piece::x</a></div><div class="ttdeci">int x</div><div class="ttdoc">Положение фигуры по горизонтали.</div><div class="ttdef"><b>Определения</b> GameEngine.h:16</div></div>
+<div class="ttc" id="astruct_piece_html_a97d61c9e42873e2274620c91178e879b"><div class="ttname"><a href="struct_piece.html#a97d61c9e42873e2274620c91178e879b">Piece::y</a></div><div class="ttdeci">int y</div><div class="ttdoc">Положение фигуры по вертикали.</div><div class="ttdef"><b>Определения</b> GameEngine.h:17</div></div>
+<div class="ttc" id="astruct_piece_html_ac230be187a7a2b9e2609125f71bd7b5e"><div class="ttname"><a href="struct_piece.html#ac230be187a7a2b9e2609125f71bd7b5e">Piece::shape</a></div><div class="ttdeci">std::vector&lt; std::vector&lt; int &gt; &gt; shape</div><div class="ttdoc">Форма фигуры как матрица (2D-вектор).</div><div class="ttdef"><b>Определения</b> GameEngine.h:18</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="_game_engine_8h.html">GameEngine.h</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+  </ul>
+</div>
+</body>
+</html>
